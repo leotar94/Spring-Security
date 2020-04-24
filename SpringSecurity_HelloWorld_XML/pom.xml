@@ -2,7 +2,106 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.spring</groupId>
   <artifactId>SpringSecurity_HelloWorld_XML</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1</version>
   <name>SpringSecurity_HelloWorld_XML</name>
   <description>Progetto che utilizza spring security con xml</description>
+  <packaging>war</packaging>
+  
+  <properties>
+  	<springframework.version>5.2.5.RELEASE</springframework.version>
+  	<springsecurity.version>5.3.1.RELEASE</springsecurity.version>
+  </properties>
+  
+  <dependencies>
+  	<!-- SPRING FRAMEWORK -->
+  	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+    	<artifactId>spring-core</artifactId>
+    	<version>${springframework.version}</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+	<dependency>
+   		<groupId>org.springframework</groupId>
+  	    <artifactId>spring-web</artifactId>
+ 	    <version>${springframework.version}</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+    	<artifactId>spring-webmvc</artifactId>
+    	<version>${springframework.version}</version>
+	</dependency>
+	
+	<!-- SPRING SECURITY-->
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+	<dependency>
+    	<groupId>org.springframework.security</groupId>
+    	<artifactId>spring-security-web</artifactId>
+    	<version>${springsecurity.version}</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+	<dependency>
+	    <groupId>org.springframework.security</groupId>
+	    <artifactId>spring-security-config</artifactId>
+	    <version>${springsecurity.version}</version>
+	</dependency>
+	
+	<!-- LIBREIA JSTL (tomcat non ha questa lib) -->
+	<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+	
+	<!-- LIBRERIE SERVLET E JSP SCOPE PROVIDED!!!!!!!!!(tomcat ha già queste lib)-->
+	<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+	<dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>javax.servlet-api</artifactId>
+    	<version>4.0.1</version>
+    	<scope>provided</scope>
+	</dependency>
+
+  	<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
+	<dependency>
+	    <groupId>javax.servlet.jsp</groupId>
+	    <artifactId>javax.servlet.jsp-api</artifactId>
+	    <version>2.3.3</version>
+	    <scope>provided</scope>
+	</dependency>
+
+  </dependencies>
+  
+  <build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.2</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.4</version>
+					<configuration>
+						<warSourceDirectory>src/main/webapp</warSourceDirectory>
+						<warName>SpringSecurityHelloWorldAnnotationExample</warName>
+						<failOnMissingWebXml>false</failOnMissingWebXml>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<finalName>SpringSecurityHelloWorldAnnotationExample</finalName>
+	</build>
+  
 </project>
