@@ -2,7 +2,7 @@ package com.springsecurity.configuration;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class HelloWorldConfiguation extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class SpringMvcInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {

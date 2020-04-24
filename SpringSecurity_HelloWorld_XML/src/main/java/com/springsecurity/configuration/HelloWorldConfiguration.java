@@ -13,7 +13,7 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan(basePackages="com.springsecurity")
 public class HelloWorldConfiguration {
 	
-	@Bean
+	@Bean(name="HelloWorld")
 	public ViewResolver viewResolver() {
 	InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 	viewResolver.setViewClass(JstlView.class);
