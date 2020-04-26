@@ -11,7 +11,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		<springframework.version>4.2.5.RELEASE</springframework.version>
+		<springframework.version>5.2.5.RELEASE</springframework.version>
         <springsecurity.version>4.0.4.RELEASE</springsecurity.version>
         <hibernate.version>4.3.11.Final</hibernate.version>
         <!-- ci manca la versione del connettore mysql, provo a impostare la connessione sul SERVER-->
